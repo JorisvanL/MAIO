@@ -6,7 +6,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 import statsmodels.api as sm
 
 
-with open("/Users/jorisvanlammeren/Documents/Studie/MAIO/data1c.txt") as f:
+with open("/Users/jorisvanlammeren/Documents/Studie/MAIO/data1a.txt") as f:
     content = f.readlines()
 content = [x.strip() for x in content] 
 
@@ -29,8 +29,8 @@ a1=arma_res.params[1]
 a2=0
 
 n=len(content)
-x = 0
-x1 = 1
+x = 10
+x1 = 0
 x2 = 0
 xlijst = np.array([])
 
@@ -88,4 +88,6 @@ plt.plot(data2)
 plt.show()
 plot_acf(data2,lags=10)
 plot_pacf(data2,lags=10)
+
+#hello tom
 
